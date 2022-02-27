@@ -9,12 +9,10 @@ class InfraEngParser(HTMLParser):
         self.record = False
     
     def handle_starttag(self, tag, attrs):        
-        #print("Encountered a start tag:", tag)
         if tag == "section":
             self.record = True
         
     def handle_endtag(self, tag):
-        #print("Encountered an end tag :", tag)
         if tag == "section":
             self.record = False
 
